@@ -31,6 +31,12 @@
                     $("#message").html("Failed to create new object, with error code: " + JSON.stringify(err));
                 })
         }
+
+        $(function(){
+            $("#btnA").click(function(e){
+                btnAClick(e);
+                })
+        })
     </script>
 </head>
 
@@ -42,7 +48,8 @@
     </div>
     <div id="button">
         <button id="btnA" class="btn" onclick="register()">Register</button>
-        <button id="btnB" class="btn">Fetch</button>
+        <button id="btnB" class="btn" onclick="fetch()">Fetch</button>
+        <button id="btnA" onclick="btnAClick()">
     </div>
     <div id="message">message area</div>
 </body>
